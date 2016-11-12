@@ -49,6 +49,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'Api';
+$route['api'] = 'api';
+$route['api/get_by_marker/:marker_mile'] = 'api/get_by_marker';
+$route['api/get/:id'] = 'api/get_get';
+$route['api/delete_marker/:marker_mile'] = 'api/delete_marker';
+$route['api/get_nearest_marker'] = 'api/get_nearest_marker';
 $route['404_override'] = '';
+$route['api/findClosestMarker'] = 'api/get_nearest';
+
 $route['translate_uri_dashes'] = FALSE;

@@ -128,7 +128,6 @@ class CI_URI {
 						: $this->_parse_request_uri();
 					break;
 			}
-
 			$this->_set_uri_string($uri, FALSE);
 		}
 
@@ -272,6 +271,7 @@ class CI_URI {
 	 */
 	protected function _parse_query_string()
 	{
+
 		$uri = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : @getenv('QUERY_STRING');
 
 		if (trim($uri, '/') === '')
